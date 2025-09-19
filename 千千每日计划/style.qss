@@ -1,0 +1,182 @@
+/* style.qss - 应用程序的全局样式表 */
+
+/* --- 全局设置 --- */
+QWidget {
+    font-family: "Microsoft YaHei UI", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    font-size: 14px;
+    color: #333;
+}
+
+QMainWindow {
+    background-color: #f0f2f5;
+}
+
+/* --- 右侧面板 --- */
+#RightPanel {
+    background-color: #ffffff;
+    border-left: 1px solid #dcdfe6;
+}
+
+/* --- 标题 --- */
+#WeekTitle {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2c3e50;
+    padding: 15px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #dcdfe6;
+}
+
+/* --- 网格表头 --- */
+#GridHeader {
+    font-weight: bold;
+    padding: 10px;
+    background-color: #fafafa;
+    border: 1px solid #e8e8e8;
+}
+
+/* --- 计划卡片 --- */
+#PlanWidget {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+}
+
+#PlanWidget:hover {
+    border: 1px solid #a0c4ff;
+}
+
+/* 休息状态 */
+#PlanWidget[plan_type="rest"] {
+    background-color: #f0f9eb;
+    border: 1px solid #e1f3d8;
+}
+
+/* 无状态 */
+#PlanWidget[plan_type="empty"] {
+    background-color: #fafafa;
+    border: 1px solid #f2f2f2;
+}
+
+
+/* 左侧时间段卡片样式 */
+#TimeSlotWidget {
+    background-color: #fafafa;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 2px 8px; /* 更新：增加左右内边距 */
+}
+
+
+/* --- 文本编辑器 --- */
+QTextEdit {
+    border: none;
+    background-color: transparent;
+    padding: 5px;
+}
+
+/* --- 滚动区域 --- */
+QScrollArea {
+    border: none;
+}
+
+/* --- 按钮 --- */
+QPushButton {
+    background-color: #409eff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-family: "Font Awesome 5 Free Solid", "Microsoft YaHei UI";
+}
+
+QPushButton:hover {
+    background-color: #66b1ff;
+}
+
+QPushButton:pressed {
+    background-color: #3a8ee6;
+}
+
+#DeleteButton {
+    background-color: #f56c6c;
+    padding: 2px;
+    font-size: 12px;
+    border-radius: 10px;
+}
+#DeleteButton:hover {
+    background-color: #f78989;
+}
+
+/* --- 打卡状态按钮样式 (颜色在代码中设置以提高性能) --- */
+#CompleteButton {
+    background-color: transparent;
+    border: none;
+    color: #c0c4cc; /* 未打卡 默认颜色 */
+    font-size: 24px;
+    padding: 0;
+}
+
+/* 移除了旧的[status]选择器以优化性能 */
+
+/* --- 侧边栏折叠/展开相关样式 --- */
+#CollapsedPanel {
+    background-color: #ffffff;
+    border-left: 1px solid #dcdfe6;
+}
+
+#SidebarToggleButton {
+    background-color: transparent;
+    color: #909399;
+    border: none;
+    font-size: 20px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+}
+
+#SidebarToggleButton:hover {
+    color: #409eff;
+    background-color: #f5f7fa;
+    border-radius: 5px;
+}
+
+#ExpandButton {
+    background-color: transparent;
+    color: #909399;
+    border: none;
+    font-size: 20px;
+    padding: 5px;
+}
+
+#ExpandButton:hover {
+    color: #409eff;
+    background-color: #f5f7fa;
+    border-radius: 5px;
+}
+
+/* --- 日历 --- */
+QCalendarWidget QToolButton {
+    height: 40px;
+    font-size: 16px;
+    color: #409eff;
+    background-color: transparent;
+}
+
+QCalendarWidget QMenu {
+    background-color: white;
+}
+
+QCalendarWidget QSpinBox {
+    font-size: 14px;
+}
+
+QCalendarWidget QTableView {
+    selection-background-color: #409eff;
+    selection-color: #2c3e50; /* Changed from white to dark blue/gray */
+}
+
+#qt_calendar_navigationbar {
+    background-color: #f5f7fa;
+}
